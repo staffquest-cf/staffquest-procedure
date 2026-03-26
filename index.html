@@ -23,9 +23,7 @@ body {
 .logo { font-size: 15px; font-weight: 700; color: #FFD700; letter-spacing: 1px; font-family: 'Courier New', monospace; }
 .logo span { color: #FF6B35; }
 .badge { font-size: 10px; color: #888; font-family: 'Courier New', monospace; letter-spacing: 1px; }
-
 .container { max-width: 680px; margin: 0 auto; padding: 24px 16px; }
-
 .header-card {
   background: #1C1C2E;
   border-radius: 12px;
@@ -34,206 +32,146 @@ body {
   border: 1px solid rgba(255,215,0,0.2);
 }
 .header-card h1 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #FFD700;
-  font-family: 'Courier New', monospace;
-  margin-bottom: 8px;
+  font-size: 20px; font-weight: 700; color: #FFD700;
+  font-family: 'Courier New', monospace; margin-bottom: 8px;
 }
 .header-card p { font-size: 14px; color: #888899; line-height: 1.6; }
-
 .form-card {
-  background: white;
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 16px;
-  border: 1px solid #EEEEEE;
+  background: white; border-radius: 12px; padding: 24px;
+  margin-bottom: 16px; border: 1px solid #EEEEEE;
 }
 .section-title {
-  font-size: 11px;
-  font-weight: 700;
-  color: #FF6B35;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  font-size: 11px; font-weight: 700; color: #FF6B35;
+  letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
 }
 .section-title::before {
-  content: '';
-  width: 3px; height: 14px;
-  background: #FF6B35;
-  border-radius: 2px;
-  display: block;
+  content: ''; width: 3px; height: 14px; background: #FF6B35;
+  border-radius: 2px; display: block;
 }
-
 .field { margin-bottom: 16px; }
 .field label {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  color: #444;
-  margin-bottom: 6px;
+  display: block; font-size: 12px; font-weight: 600;
+  color: #444; margin-bottom: 6px;
 }
 .field input, .field select, .field textarea {
-  width: 100%;
-  padding: 11px 14px;
-  border: 1.5px solid #E0E0E0;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #1C1C2E;
-  background: #FAFAFA;
-  outline: none;
-  transition: border-color 0.2s;
-  font-family: inherit;
+  width: 100%; padding: 11px 14px;
+  border: 1.5px solid #E0E0E0; border-radius: 8px;
+  font-size: 14px; color: #1C1C2E; background: #FAFAFA;
+  outline: none; transition: border-color 0.2s; font-family: inherit;
 }
 .field input:focus, .field select:focus, .field textarea:focus {
-  border-color: #FF6B35;
-  background: white;
+  border-color: #FF6B35; background: white;
 }
 .field textarea { resize: vertical; line-height: 1.6; }
 .field-hint { font-size: 11px; color: #999; margin-top: 5px; }
-
 .fields-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
+@media (max-width: 500px) { .fields-row { grid-template-columns: 1fr; } }
 .procedure-area {
-  background: #FAFAFA;
-  border: 1.5px dashed #DDDDDD;
-  border-radius: 8px;
-  padding: 16px;
-  min-height: 200px;
-  font-size: 14px;
-  color: #1C1C2E;
-  line-height: 1.7;
-  resize: vertical;
-  width: 100%;
-  outline: none;
-  transition: border-color 0.2s, background 0.2s;
-  font-family: inherit;
+  background: #FAFAFA; border: 1.5px dashed #DDDDDD; border-radius: 8px;
+  padding: 16px; min-height: 200px; font-size: 14px; color: #1C1C2E;
+  line-height: 1.7; resize: vertical; width: 100%; outline: none;
+  transition: border-color 0.2s, background 0.2s; font-family: inherit;
 }
-.procedure-area:focus {
-  border-color: #FF6B35;
-  border-style: solid;
-  background: white;
-}
-.char-count { font-size: 11px; color: #999; text-align: right; margin-top: 6px; }
-
+.procedure-area:focus { border-color: #FF6B35; border-style: solid; background: white; }
+.char-count { font-size: 11px; margin-top: 6px; text-align: right; }
+.char-count.ok { color: #999; }
+.char-count.warn { color: #FF6B35; font-weight: 600; }
+.char-count.good { color: #00C864; font-weight: 600; }
 .info-box {
-  background: #FFF8F0;
-  border: 1px solid rgba(255,107,53,0.3);
-  border-radius: 8px;
-  padding: 14px 16px;
-  margin-bottom: 20px;
+  background: #FFF8F0; border: 1px solid rgba(255,107,53,0.3);
+  border-radius: 8px; padding: 14px 16px; margin-bottom: 20px;
 }
 .info-box-title { font-size: 12px; font-weight: 700; color: #FF6B35; margin-bottom: 6px; }
 .info-box-list { font-size: 12px; color: #666; line-height: 1.8; }
 .info-box-list li { margin-left: 16px; }
-
 .submit-btn {
-  width: 100%;
-  padding: 16px;
-  background: #FF6B35;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  letter-spacing: 0.5px;
+  width: 100%; padding: 16px; background: #FF6B35; color: white;
+  border: none; border-radius: 10px; font-size: 15px; font-weight: 700;
+  cursor: pointer; letter-spacing: 0.5px;
   transition: opacity 0.2s, transform 0.1s;
   font-family: 'Courier New', monospace;
 }
 .submit-btn:hover { opacity: 0.9; }
 .submit-btn:active { transform: scale(0.99); }
 .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
 .status-box {
-  display: none;
-  background: white;
-  border-radius: 12px;
-  padding: 24px;
-  text-align: center;
-  border: 1px solid #EEEEEE;
-  margin-top: 16px;
+  display: none; background: white; border-radius: 12px; padding: 24px;
+  text-align: center; border: 1px solid #EEEEEE; margin-top: 16px;
 }
 .status-icon { font-size: 36px; margin-bottom: 12px; }
 .status-title { font-size: 16px; font-weight: 700; color: #1C1C2E; margin-bottom: 8px; }
 .status-desc { font-size: 13px; color: #888; line-height: 1.6; }
 .status-box.success { border-color: rgba(0,200,100,0.3); background: #F0FFF8; }
-.status-box.error   { border-color: rgba(255,68,68,0.3);   background: #FFF5F5; }
-.status-box.loading { border-color: rgba(255,107,53,0.3);  background: #FFF8F0; }
-
+.status-box.error   { border-color: rgba(255,68,68,0.3); background: #FFF5F5; }
+.status-box.loading { border-color: rgba(255,107,53,0.3); background: #FFF8F0; }
 .spinner {
   width: 32px; height: 32px;
-  border: 3px solid #FFE0D0;
-  border-top-color: #FF6B35;
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
+  border: 3px solid #FFE0D0; border-top-color: #FF6B35;
+  border-radius: 50%; animation: spin 0.8s linear infinite;
   margin: 0 auto 12px;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-
 .reset-btn {
-  margin-top: 14px;
-  padding: 10px 24px;
-  background: white;
-  color: #FF6B35;
-  border: 1.5px solid #FF6B35;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
+  margin-top: 14px; padding: 10px 24px; background: white;
+  color: #FF6B35; border: 1.5px solid #FF6B35; border-radius: 8px;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.success-detail {
+  margin: 12px 0; padding: 12px; background: white; border-radius: 8px;
+  font-size: 12px; color: #444; text-align: left;
+}
+.success-detail-title { font-weight: 700; margin-bottom: 6px; color: #FF6B35; }
+.success-detail-item {
+  padding: 3px 0; padding-left: 14px; position: relative;
+}
+.success-detail-item::before {
+  content: '✓'; position: absolute; left: 0; color: #00C864; font-weight: 700;
 }
 </style>
 </head>
 <body>
-
 <div class="top-bar">
   <div class="logo"><span>STAFF</span>QUEST</div>
   <div class="badge">CARICA PROCEDURA</div>
 </div>
-
 <div class="container">
-
   <div class="header-card">
     <h1>Carica una nuova procedura</h1>
-    <p>Scrivi o incolla la procedura operativa del tuo locale nel campo qui sotto. Non serve che sia perfetta — basta che sia chiara. Il sistema la strutturerà automaticamente e creerà una procedura strutturata e professionale per il tuo locale.</p>
+    <p>Scrivi o incolla la procedura operativa del tuo locale. Non serve che sia perfetta — basta che sia chiara. Il sistema la strutturerà automaticamente e creerà missioni, domande e livelli per il gioco.</p>
   </div>
-
+ 
   <div class="form-card">
     <div class="section-title">Info procedura</div>
     <div class="fields-row">
       <div class="field">
         <label>Nome del locale *</label>
-        <input type="text" id="locale" placeholder="Es: KEIK Bar Ristorante" maxlength="80">
+        <input type="text" id="locale" placeholder="Es: KEIK Bar Ristorante" maxlength="80" autocomplete="organization">
       </div>
       <div class="field">
         <label>Ruolo del dipendente *</label>
         <select id="ruolo">
           <option value="">Seleziona ruolo...</option>
-          <option value="Sala">Sala — Cameriere</option>
-          <option value="Bar">Bar — Barista</option>
-          <option value="Cucina">Cucina — Cuoco</option>
-          <option value="Accoglienza">Accoglienza</option>
-          <option value="Magazzino">Magazzino</option>
-          <option value="Tutti">Tutti i ruoli</option>
+          <option value="cameriere">Cameriere</option>
+          <option value="barista">Barista</option>
+          <option value="cuoco">Cuoco</option>
         </select>
       </div>
     </div>
     <div class="field">
       <label>Titolo della procedura *</label>
       <input type="text" id="titolo" placeholder="Es: Apertura Dehor Esterno" maxlength="100">
+      <div class="field-hint">Scegli un titolo chiaro che descriva l'attività principale</div>
     </div>
   </div>
-
+ 
   <div class="form-card">
     <div class="section-title">Procedura grezza</div>
     <div class="info-box">
       <div class="info-box-title">Come scrivere la procedura</div>
       <ul class="info-box-list">
         <li>Scrivi i passi nell'ordine in cui si fanno</li>
-        <li>Includi dettagli specifici del tuo locale (nomi dei tavoli, posizioni, strumenti)</li>
+        <li>Includi dettagli specifici del tuo locale (nomi dei tavoli, strumenti)</li>
         <li>Aggiungi gli errori più comuni che vedi fare al personale</li>
         <li>Non preoccuparti della forma — scrivi come parli</li>
       </ul>
@@ -243,38 +181,60 @@ body {
         class="procedure-area"
         id="procedura"
         placeholder="Esempio:
-Per aprire il dehor la mattina si prende il mazzo di chiavi dal cassetto, si aprono i lucchetti delle catene, si tolgono le catene dai tavoli e si mettono nel cesto. I tavoli vanno aperti con la leva laterale. Prima di apparecchiare bisogna pulire tutto con il detersivo apposito. Il tavolo 10 e 11 vanno messi davanti alle vetrine di Via Scarpa. Gli altri tavoli vanno dentro la struttura del dehor. Non dimenticarsi di controllare che la cassa bluetooth sia carica..."
+Per aprire il dehor la mattina si prende il mazzo di chiavi dal cassetto, si aprono i lucchetti delle catene, si tolgono le catene dai tavoli e si mettono nel cesto. I tavoli vanno aperti con la leva laterale. Prima di apparecchiare bisogna pulire tutto con il detersivo apposito. Il tavolo 10 e 11 vanno messi davanti alle vetrine di Via Scarpa. Non dimenticarsi di controllare che la cassa bluetooth sia carica..."
         rows="10"
         oninput="updateCount(this)"
       ></textarea>
-      <div class="char-count" id="char-count">0 caratteri</div>
+      <div class="char-count ok" id="char-count">0 caratteri — scrivi almeno 100 caratteri</div>
     </div>
   </div>
-
+ 
   <button class="submit-btn" id="submit-btn" onclick="submitProcedura()">
     PROCESSA PROCEDURA
   </button>
-
+ 
   <div class="status-box" id="status-box">
     <div id="status-content"></div>
   </div>
-
 </div>
-
+ 
 <script>
 const WEBHOOK_URL = 'https://hook.eu1.make.com/jbtfesx7xr2ya5hi563w9ocgiy7x5pkt';
-
+ 
+const RUOLO_DISPLAY = {
+  cameriere: 'Cameriere',
+  barista:   'Barista',
+  cuoco:     'Cuoco'
+};
+ 
 function updateCount(el) {
-  document.getElementById('char-count').textContent = el.value.length + ' caratteri';
+  const n = el.value.length;
+  const el2 = document.getElementById('char-count');
+  if (n === 0) {
+    el2.className = 'char-count ok';
+    el2.textContent = '0 caratteri — scrivi almeno 100 caratteri';
+  } else if (n < 100) {
+    el2.className = 'char-count warn';
+    el2.textContent = n + ' caratteri — troppo corta, aggiungi più dettagli';
+  } else if (n < 300) {
+    el2.className = 'char-count ok';
+    el2.textContent = n + ' caratteri ✓';
+  } else {
+    el2.className = 'char-count good';
+    el2.textContent = n + ' caratteri — ottimo livello di dettaglio!';
+  }
 }
-
+ 
 function showStatus(type, icon, title, desc, extra) {
   const box = document.getElementById('status-box');
   const content = document.getElementById('status-content');
   box.className = 'status-box ' + type;
   box.style.display = 'block';
   if (type === 'loading') {
-    content.innerHTML = '<div class="spinner"></div><div class="status-title">' + title + '</div><div class="status-desc">' + desc + '</div>';
+    content.innerHTML =
+      '<div class="spinner"></div>' +
+      '<div class="status-title">' + title + '</div>' +
+      '<div class="status-desc">' + desc + '</div>';
   } else {
     content.innerHTML =
       '<div class="status-icon">' + icon + '</div>' +
@@ -285,68 +245,85 @@ function showStatus(type, icon, title, desc, extra) {
   }
   box.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-
+ 
 function resetForm() {
   document.getElementById('titolo').value = '';
   document.getElementById('procedura').value = '';
-  document.getElementById('char-count').textContent = '0 caratteri';
+  updateCount(document.getElementById('procedura'));
   document.getElementById('status-box').style.display = 'none';
   document.getElementById('submit-btn').disabled = false;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
+ 
 async function submitProcedura() {
   const locale    = document.getElementById('locale').value.trim();
   const ruolo     = document.getElementById('ruolo').value;
   const titolo    = document.getElementById('titolo').value.trim();
-
   const procedura = document.getElementById('procedura').value.trim();
-
-  if (!locale)    { alert('Inserisci il nome del locale'); return; }
-  if (!ruolo)     { alert('Seleziona il ruolo del dipendente'); return; }
-  if (!titolo)    { alert('Inserisci il titolo della procedura'); return; }
-  if (procedura.length < 50) { alert('La procedura e troppo corta — aggiungi piu dettagli'); return; }
-
+ 
+  // Validazione
+  if (!locale)              { alert('Inserisci il nome del locale'); return; }
+  if (!ruolo)               { alert('Seleziona il ruolo del dipendente'); return; }
+  if (!titolo)              { alert('Inserisci il titolo della procedura'); return; }
+  if (procedura.length < 100) {
+    alert('La procedura è troppo corta — aggiungi almeno 100 caratteri con i dettagli operativi');
+    return;
+  }
+ 
   document.getElementById('submit-btn').disabled = true;
-  showStatus('loading', '', 'Elaborazione in corso...', "Stiamo strutturando la procedura. Ci vogliono circa 30 secondi.");
-
+  showStatus('loading', '', 'Elaborazione in corso...', 'Stiamo strutturando la procedura e creando i contenuti di gioco. Ci vogliono circa 30–60 secondi.');
+ 
+  // Payload completo per Make v2
+  const payload = {
+    locale,
+    ruolo,                                    // valore normalizzato: "cameriere", "barista", ecc.
+    ruolo_display: RUOLO_DISPLAY[ruolo] || ruolo, // label leggibile per log/debug
+    titolo,
+    procedura_grezza: procedura,
+    pipeline_version: 'v2',
+    char_count: procedura.length,
+    data_invio: new Date().toISOString()
+  };
+ 
   try {
     const response = await fetch(WEBHOOK_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        locale,
-        ruolo,
-        titolo,
-        procedura_grezza: procedura,
-        data_invio: new Date().toISOString()
-      })
+      body: JSON.stringify(payload)
     });
-
+ 
     if (response.ok) {
       showStatus(
         'success',
-        'OK',
+        '✓',
         'Procedura elaborata con successo!',
-        'La procedura "' + titolo + '" e stata processata dall AI e salvata su Airtable. Troverai la versione strutturata, il JSON per il gioco e i KPI nel backoffice.',
-        '<div style="margin:12px 0; padding:12px; background:white; border-radius:8px; font-size:12px; color:#444; text-align:left;">' +
-        '<div style="font-weight:700; margin-bottom:6px; color:#FF6B35;">Cosa e stato creato:</div>' +
-        '<div style="margin-bottom:3px;">Procedura strutturata in passi operativi</div>' +
-        '<div style="margin-bottom:3px;">Versione didattica con micro-lezione</div>' +
-        '<div style="margin-bottom:3px;">Struttura per il game play</div>' +
-        '<div>KPI e checklist di audit per il responsabile</div>' +
+        'La procedura "' + titolo + '" per il ruolo ' + RUOLO_DISPLAY[ruolo] + ' è stata processata dall\'AI e salvata.',
+        '<div class="success-detail">' +
+        '<div class="success-detail-title">Cosa è stato creato nel gioco:</div>' +
+        '<div class="success-detail-item">Procedura strutturata nelle 6 aree operative</div>' +
+        '<div class="success-detail-item">Missioni con titolo e descrizione coinvolgente</div>' +
+        '<div class="success-detail-item">Domande a risposta multipla per ogni step</div>' +
+        '<div class="success-detail-item">Livello di difficoltà (1–5) e livello consigliato (1–10)</div>' +
         '</div>'
       );
     } else {
-      throw new Error('Errore server: ' + response.status);
+      let errMsg = 'Errore server ' + response.status;
+      try {
+        const errData = await response.json();
+        if (errData.message) errMsg = errData.message;
+      } catch(_) {}
+      throw new Error(errMsg);
     }
   } catch (err) {
     document.getElementById('submit-btn').disabled = false;
+    const isShort = err.message && err.message.includes('troppo breve');
     showStatus(
       'error',
-      'X',
-      'Errore durante l elaborazione',
-      'Qualcosa e andato storto. Riprova tra qualche secondo. Se il problema persiste contatta il supporto StaffQuest.',
+      '✗',
+      isShort ? 'Procedura troppo breve' : 'Errore durante l\'elaborazione',
+      isShort
+        ? 'Aggiungi più dettagli alla procedura — descrivi ogni passo con specifiche del tuo locale.'
+        : 'Qualcosa è andato storto. Riprova tra qualche secondo. Se il problema persiste contatta il supporto StaffQuest.',
       '<div style="margin-top:12px;"><button class="reset-btn" onclick="document.getElementById(\'status-box\').style.display=\'none\'; document.getElementById(\'submit-btn\').disabled=false;">Riprova</button></div>'
     );
   }
